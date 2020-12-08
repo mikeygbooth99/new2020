@@ -1,0 +1,2361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="/sochain-ico.png" />
+    <meta name="title" content="Multi-Currency Block Explorer and API" />
+    <meta name="description" content="Multi-Currency API for Developers" />
+    <link rel="image_src" href="https://chain.so/sochain-logo-88px.png" />
+
+
+
+    <title>Dogecoin Block No. 2,830,288</title>
+
+
+
+
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+    <script src="//live-sochain-blockioinc.netdna-ssl.com/js/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//live-sochain-blockioinc.netdna-ssl.com/js/jquery.cookie.min.js"></script>
+    <script src="//live-sochain-blockioinc.netdna-ssl.com/js/jquery.timeago.min.js"></script>
+    <script src="//live-sochain-blockioinc.netdna-ssl.com/js/raphael-min.js"></script>
+    <script src="//live-sochain-blockioinc.netdna-ssl.com/morris.min.js?mtime=1478222543"></script>
+    <script src="//live-sochain-blockioinc.netdna-ssl.com/js/jquery.noty.packaged.min.js"></script>
+    <script src="//live-sochain-blockioinc.netdna-ssl.com/js/bignumber.min.js"></script>
+    <script src="//live-sochain-blockioinc.netdna-ssl.com/js/jquery.dateFormat.js"></script>
+    <script src="//live-sochain-blockioinc.netdna-ssl.com/js/pusher.min.js" type="text/javascript"></script>
+    <script src="//live-sochain-blockioinc.netdna-ssl.com/bootstrap/offcanvas.js?mtime=1410942573"></script>
+    <link rel="stylesheet" href="//live-sochain-blockioinc.netdna-ssl.com/bootstrap/monokai.css">
+    <script src="//live-sochain-blockioinc.netdna-ssl.com/bootstrap/highlight.pack.js"></script>
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    
+    <link href="//live-sochain-blockioinc.netdna-ssl.com/bootstrap/custom.css?mtime=1410942573" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+      #sizebar {
+      margin-top: 15px;
+      }
+
+      ul.nav li:hover > ul.dropdown-menu {
+      display: block;    
+      }
+
+      .form-control + .glyphicon {
+      position: absolute;
+      right: 0;
+      padding: 16px 85px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+	  
+
+          <a class="navbar-brand" href="/"><img src="//live-sochain-blockioinc.netdna-ssl.com/sochain-logo-nav-v2.png" alt="SoChain." width="165"/></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+	    <li class="active"><a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-play-circle" style="padding-right: 5px;"></span>Networks <span class="caret"></span></a>
+	      <ul class="dropdown-menu nav" role="menu">
+		<li ><a href="/btc"><span style="padding-right: 5px;"><img src="//live-sochain-blockioinc.netdna-ssl.com/Bitcoin@2x.png" width=20/></span> Bitcoin (Main)</a></li>
+		<li ><a href="/ltc"><span style="padding-right: 5px;"><img src="//live-sochain-blockioinc.netdna-ssl.com/Litecoin@2x.png" width=20/></span> Litecoin (Main)</a></li>
+		<li ><a href="/zcash"><span style="padding-right: 5px;"><img src="//live-sochain-blockioinc.netdna-ssl.com/Zcash@2x.png" width=20/></span> Zcash (Main)</a></li>
+		<li class="active"><a href="/doge"><span style="padding-right: 5px;"><img src="//live-sochain-blockioinc.netdna-ssl.com/Dogecoin@2x.png" width=20/></span> Dogecoin (Main)</a></li>
+		<li ><a href="/dash"><span style="padding-right: 5px;"><img src="//live-sochain-blockioinc.netdna-ssl.com/Dash@2x.png" width=20/></span> Dash (Main)</a></li>
+		<li ><a href="/testnet/btc"><span class="glyphicon glyphicon-edit" style="padding-right: 5px;"></span> Bitcoin (Testnet)</a></li>
+		<li ><a href="/testnet/ltc"><span class="glyphicon glyphicon-edit" style="padding-right: 5px;"></span> Litecoin (Testnet)</a></li>
+		<li ><a href="/testnet/zcash"><span class="glyphicon glyphicon-edit" style="padding-right: 5px;"></span> Zcash (Testnet)</a></li>
+		<li ><a href="/testnet/doge"><span class="glyphicon glyphicon-edit" style="padding-right: 5px;"></span> Dogecoin (Testnet)</a></li>
+		<li ><a href="/testnet/dash"><span class="glyphicon glyphicon-edit" style="padding-right: 5px;"></span> Dash (Testnet)</a></li>
+	      </ul>
+	    </li>
+            <li><a href="/api"><span class="glyphicon glyphicon-cog" style="padding-right: 5px;"></span>Blockchain API</a></li>
+	    <li><a href="https://block.io" target="_blank"><span class="glyphicon glyphicon-briefcase" style="padding-right: 5px;"></span>My Wallet</a></li>
+	    
+            
+          </ul>
+	  <form action="/resolver" class="navbar-form navbar-right" style="max-width: 300px;">
+	    <div class="input-group">
+	      <input type="Search" placeholder="Such Search..." class="form-control" name="query"/>
+	      <input class="hidden" type="hidden" name="priority" value="DOGE" />
+	      <div class="input-group-btn">
+		<button class="btn btn-info">
+		  <span class="glyphicon glyphicon-search"></span>
+		</button>
+	      </div>
+	    </div>
+	  </form>
+	</div>
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
+
+    
+
+<div style="margin: 0 auto;">
+
+  <p class="text-center" style="margin-bottom: 1px;">
+    <!-- Main Page Leaderboard, 728x90 [async] -->
+
+  </p>
+
+  <div id="bitcoin_news_widget_s_line" class="hidden-xs" style="margin-bottom: 15px;">
+  </div>
+
+
+</div>
+
+
+    <div style="min-height: 80%;">
+      
+
+<script>
+
+  var block_ws = pusher.subscribe('confirm_block_doge');
+
+  var confirmations = 14238;
+  var accept_confs = 1;
+  var cur_blockhash = "";
+  var network_name = 'DOGE';
+
+  block_ws.bind('block_update', function(data) {
+  if (data.type == "block") {
+  if ((cur_blockhash == data.value.previous_blockhash || cur_blockhash == "") && confirmations > 0) {
+    confirmations = confirmations + 1;
+    cur_blockhash = data.value.blockhash;
+    $('span#confirmations').text(''+confirmations.integer_with_delimiter());
+    if (confirmations >= accept_confs) { $('button#cstatus').removeClass('btn-warning').addClass('btn-success').text('Confirmed'); }
+
+    if (confirmations == 2) { $('span#next_block').replaceWith('<a href="/block/'+network_name+'/'+data.value.blockhash+'" class="poptip" data-toggle="tooltip" data-placement="bottom" title="Next block in the Blockchain is..."><span class="glyphicon glyphicon-chevron-right" style="font-size:48px; padding-top: 50px;" id="next_block"></span></a>'); $('.poptip').tooltip(); }
+  }
+  }
+  });
+</script>
+
+
+<div class="container">
+  <div class="row">
+
+
+    <div class="col-xs-12 text-left visible-xs"><a href="/block/DOGE/434e265cdacfc5a99045f5d252ee479082b31149c7f00937a2411161174627b0" class="poptip" data-toggle="tooltip" data-placement="bottom" title="Previous block in the Blockchain was..."><span class="glyphicon glyphicon-chevron-left" style="font-size:48px; padding-top: 50px;"></span></a></div>
+
+
+    <div class="col-xs-12 text-center visible-xs">
+      <h1>Block #2,830,288</h1>
+    </div>
+    <div class="col-xs-12 text-right visible-xs"><a href="/block/DOGE/81ae6b59174e5db7e8a4b00d6bd712002d6381aa17fbd6d581cfee994afd68f9"><span class="glyphicon glyphicon-chevron-right" style="font-size:48px; padding-top: 50px;"></span></a></div>
+
+
+    <div class="col-sm-2 visible-sm visible-md visible-lg text-right"><a href="/block/DOGE/434e265cdacfc5a99045f5d252ee479082b31149c7f00937a2411161174627b0" class="poptip" data-toggle="tooltip" data-placement="bottom" title="Previous block in the Blockchain was..."><span class="glyphicon glyphicon-chevron-left" style="font-size:48px; padding-top: 50px;"></span></a></div>
+
+    <div class="col-sm-8 visible-sm visible-md visible-lg page-header text-center">
+      <h1>Block #2,830,288 (<img src="/Dogecoin@2x.png" width=25 />)</h1>
+    </div>
+    <div class="col-sm-2 visible-sm visible-md visible-lg text-left"><a href="/block/DOGE/81ae6b59174e5db7e8a4b00d6bd712002d6381aa17fbd6d581cfee994afd68f9" class="poptip" data-toggle="tooltip" data-placement="bottom" title="Next block in the Blockchain is..."><span class="glyphicon glyphicon-chevron-right" style="font-size:48px; padding-top: 50px;"></span></a></div>
+  </div>
+
+
+  <table class="table table-compact table-responsive table-bordered" style="margin: 0 auto; margin-bottom: 50px; max-width: 600px; background-color: #f9f9f9;">
+    <tr><th class="text-right" style="border-right: none;">ID (Hash)</th><td style="border-left: none;"><span class="hidden-xs"><kbd class="break_word" onclick="$(this).selectText()">69e1d92e2a2c71b5466602716a81a4ed36655cf566bc6c3f13c680dc2cbcb7e5</kbd></span><span class="visible-xs"><kbd onclick="$(this).selectText()">...13c680dc2cbcb7e5</kbd></span></td></tr>
+    <tr><th class="text-right" style="border-right: none;">Block No.</th><td style="border-left: none;">2,830,288</td></tr>
+    <tr class="success"><th class="text-right" style="border-right: none;">Coin</th><td style="border-left: none;">Dogecoin (DOGE, &#270;)</td></tr>
+    <tr><th class="text-right" style="border-right: none;">Time</th><td style="border-left: none;">Jul 30, 2019 at 02:39</td></tr>
+    <tr><th class="text-right" style="border-right: none;">Status</th><td style="border-left: none;"><button type="button" class="btn btn-success btn-xs" id="cstatus">Confirmed</button></td></tr>
+    <tr><th class="text-right" style="border-right: none;">Confirmations</th><td style="border-left: none;"><span id="confirmations">14,238</span></td></tr>
+    <tr><th class="text-right" style="border-right: none;">Transactions</th><td style="border-left: none;">41</td></tr>
+    <tr><th class="text-right" style="border-right: none;">Miner</th><td style="border-left: none;">Unknown</td></tr>
+    <tr><th class="text-right" style="border-right: none;">Difficulty</th><td style="border-left: none;">4,395,482.77</td></tr>
+    <tr><th class="text-right" style="border-right: none;">Sent Value</th><td style="border-left: none;">1,161,111.72087255</td></tr>
+    <tr><th class="text-right" style="border-right: none;">Fee</th><td style="border-left: none;">42.34000000</td></tr>
+    <tr><th class="text-right" style="border-right: none;">Other Info</th><td style="border-left: none;">Size: 13,120 bytes, <a href="/api/v2/block/DOGE/69e1d92e2a2c71b5466602716a81a4ed36655cf566bc6c3f13c680dc2cbcb7e5">Raw Data</a></td></tr>
+  </table>
+
+</div>
+
+<div class="row clearfix">
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/7e6c5d66c0bce170c54dd9e274cb6539c9b1650ee9d1fca8e4cbbefac005311f" class="tx_id_title">7e6c5d66c0bce170c54dd9e274cb6539c9b1650ee9d1fca8e4cbbefac005311f</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-12 text-center">
+	<strong>Newly Generated Coins</strong>
+      </div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DNhAbRp9zcCwboFB2C8wCith1bQJoqJf5q">DNhAbRp9zcCwboFB2C8wCith1bQJoqJf5q</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       10,042.34
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/c5a77acc7b8eefe8aa85e42cfa6bb943e9b2e54a93c87022575f84c42bfe5410" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>None</div>
+	  <div style="font-weight: bold;" class="break_word">10,042.34000000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/9dea04c9375d0df1f1c81a31f2a8ab864c015bba96b8de5b22702573e5b5f0b2" class="tx_id_title">9dea04c9375d0df1f1c81a31f2a8ab864c015bba96b8de5b22702573e5b5f0b2</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D5cCbgtUsjpUdTToyK2yoW3CpoxWd8ykF8">D5cCbgtUsjpUdTToyK2yoW3CpoxWd8ykF8</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       301.27
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/ce0d49477996fdb0e24cc9509e85727e134b1e5f260a60f3a878ce66c9abc27f" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DScwAEq73fRQfpewkooMdiiBVicAiFPtiT">DScwAEq73fRQfpewkooMdiiBVicAiFPtiT</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       75.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/8556af8e5febc74f6413cdffae01332229b7de47f133947db90e9e4f8b06e172" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DEwBTYTrrwbXScJfVXjDmjK5H6QmkoC6cA">DEwBTYTrrwbXScJfVXjDmjK5H6QmkoC6cA</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       834.89
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/3935ed27d74b75d1a5ad606dbe83d59141951b00084ccbf5743681dfc8ab4efd" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DNZBY7oCYUhfrkrNXy7gzFYr2TwegdDkQ8">DNZBY7oCYUhfrkrNXy7gzFYr2TwegdDkQ8</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       34,737.03
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/8556af8e5febc74f6413cdffae01332229b7de47f133947db90e9e4f8b06e172" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DExvgbfpuxmUfK9Mj1FTuYP1fzz46YGq8D">DExvgbfpuxmUfK9Mj1FTuYP1fzz46YGq8D</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       2,018.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/8556af8e5febc74f6413cdffae01332229b7de47f133947db90e9e4f8b06e172" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D5v3shnQSxZNLfBEkwVcVCtZPLxRX7cfba">D5v3shnQSxZNLfBEkwVcVCtZPLxRX7cfba</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       122,083.49
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/e50eb10feb7948e29daf6e1412bd4c5477e5ba6f84a41a89267c7c4ef2f4f294" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       ... (<strong>7 outputs</strong>)
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>2.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">160,051.70422602</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/abe869db3304b4c2f053feba6997608c65ec55c6e47f06ecc1ad43c350aad7b5" class="tx_id_title">abe869db3304b4c2f053feba6997608c65ec55c6e47f06ecc1ad43c350aad7b5</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D8QdV8eE9AM12sUi5BEx2EcMC79rnyXZSQ">D8QdV8eE9AM12sUi5BEx2EcMC79rnyXZSQ</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       51,049.10
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/29047fa74d24ca7fbc782c439b90a62a6a230a13fff53cc202bb985bc48edce9" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D6T2fRgFhX23W9u1gXqnuP3KV2btdoYuZW">D6T2fRgFhX23W9u1gXqnuP3KV2btdoYuZW</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       56.96
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">51,107.06441570</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/bd8586daeb1df5deda797fe55920792519947019a23de6d7d5bfea3646d1108e" class="tx_id_title">bd8586daeb1df5deda797fe55920792519947019a23de6d7d5bfea3646d1108e</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DPNdgAoacxKS5cR2hZTKNLVHxwii2c3SWT">DPNdgAoacxKS5cR2hZTKNLVHxwii2c3SWT</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       6,907.48
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DRRzj2fRAfnna5gX8szQjG9tMKC6NfeUAs">DRRzj2fRAfnna5gX8szQjG9tMKC6NfeUAs</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       501.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">7,409.48769248</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/6b1871a40cfa1f36ff2c1a4891e1f8e4b285eafba8d60afffbb4b11b9c94d514" class="tx_id_title">6b1871a40cfa1f36ff2c1a4891e1f8e4b285eafba8d60afffbb4b11b9c94d514</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DRdzHa96hPSWqFNPZaWvK5YYPyDNnPiCkV">DRdzHa96hPSWqFNPZaWvK5YYPyDNnPiCkV</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       4,002.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/3c9ab7cb0c5825b3abe8ee841172650acaf200a8f600d6352f07ad9d73bdc34d" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DJ3TMadmzeQ5rXDKE9yHwZP7sLNe11gDnM">DJ3TMadmzeQ5rXDKE9yHwZP7sLNe11gDnM</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       0.01
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/21d62f585cb6168f012fe70231167011766989cc5313b3843c8afa8b5ea5d5e8" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>2.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">4,004.01913984</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/f4ca1979e3845c1689aae3c9cb931d5b3b1786a959f6242abfb24dfa5b2b5012" class="tx_id_title">f4ca1979e3845c1689aae3c9cb931d5b3b1786a959f6242abfb24dfa5b2b5012</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DAP8ihMJgXDT5kxjpr5LVdRLfs1wBnWZNi">DAP8ihMJgXDT5kxjpr5LVdRLfs1wBnWZNi</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       374.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/fcfde54f00c267506068bc5b4202ddf4c7c9e4a0f96ac32444bfd2b2c72ff432" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DEHbtbAdCqcHKyZ2zhUAXVtSRKHaJbfsDd">DEHbtbAdCqcHKyZ2zhUAXVtSRKHaJbfsDd</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       2,164.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/947461355787a9ac0d5ab7afc4efdae0074aff0e15c20a3214fc3240ce585666" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">2,539.00000000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/35e2bc4fe5cafd452b86be7cba0296e314e05027c3e28259d927d20741c2245d" class="tx_id_title">35e2bc4fe5cafd452b86be7cba0296e314e05027c3e28259d927d20741c2245d</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D5P8GvKMbUPbaegsx1xn8SLDMnFn1GsJWu">D5P8GvKMbUPbaegsx1xn8SLDMnFn1GsJWu</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       2,500.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/8ee215ddee074ee8e1cbb43feba334f56dac0107deb58698c950ce1c1a72f8f9" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DLpgMU1yZKhsJB1oREZXuTY1TaKENAQRiY">DLpgMU1yZKhsJB1oREZXuTY1TaKENAQRiY</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       0.55
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/283dc197f0b9beccdb1ed35403b8b419df54ac4ba03b91e99213955583efa930" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>2.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">2,502.55975609</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/2d000849ab994b91d1b5697f84813e137235172f3aa83d015ae6368960166ae8" class="tx_id_title">2d000849ab994b91d1b5697f84813e137235172f3aa83d015ae6368960166ae8</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DHaQsZpED5YfX1z4fW8gidJyfyyVevxJSi">DHaQsZpED5YfX1z4fW8gidJyfyyVevxJSi</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       6,307.50
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/13be8646553b3f48a32bb2348fed107e72484b6e941200fb75fc73e9429db516" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DEdzATCijnBEAhq2UonBTAbtYdH8eTQH1n">DEdzATCijnBEAhq2UonBTAbtYdH8eTQH1n</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       2,838.20
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/dc71b0dc5ab69c577a39cf2435666780dcddf575d5aeffd4cb24873e6233b72f" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>0.35600000</div>
+	  <div style="font-weight: bold;" class="break_word">9,146.05814000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/904231796c803d1aede768cb2d84678e9f97728e4742799cab0b56465fb14aef" class="tx_id_title">904231796c803d1aede768cb2d84678e9f97728e4742799cab0b56465fb14aef</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DPV8sW4VMdWtjeSgMa3vkoFSRTSrrdu82r">DPV8sW4VMdWtjeSgMa3vkoFSRTSrrdu82r</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       27,234.41
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/f37ea21ce451254de13899387d8e72a1d657088a4247a9fdea47f795faa927b2" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DBJyEN8wLdSPowmzmhbnE7V3CTepr2GNVw">DBJyEN8wLdSPowmzmhbnE7V3CTepr2GNVw</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       192.38
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/8cf3289b6422b2dd447e2b371899440f821d17cc976142fdcbc1f32db90d1e1d" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">27,427.79823574</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/766ba1701af4dd9259f897c8e96ba98b502c9a0ba966499cd902407d6ee56a34" class="tx_id_title">766ba1701af4dd9259f897c8e96ba98b502c9a0ba966499cd902407d6ee56a34</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DRvA8L86asUJzC4GF8es6NzjxpNTwye1J7">DRvA8L86asUJzC4GF8es6NzjxpNTwye1J7</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       6,000.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/38dc86f8348555995aecfe2b537f5ef33cfddae3dbc31da238270eb43de33608" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DPByfRzDtR4zBLk7RHdeT1SWtayP2tkvbJ">DPByfRzDtR4zBLk7RHdeT1SWtayP2tkvbJ</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       1,202.41
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/a308bcfef1901e0f55aff8c5c3060da5bbf342535d3d932fc45d59eb15872dcb" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.58200000</div>
+	  <div style="font-weight: bold;" class="break_word">7,203.99340000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/582ee00734b7474f5ce986385a2688c7a2e0494b214ea955a44963f88ae92840" class="tx_id_title">582ee00734b7474f5ce986385a2688c7a2e0494b214ea955a44963f88ae92840</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D6vykdXctxtFhYcwh4fS8RadbgrFfjfrZb">D6vykdXctxtFhYcwh4fS8RadbgrFfjfrZb</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       0.01
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/fa2590bc71d080a7604299397f14007666fbfa14e2dc6452be8d6cad91c3978a" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DJf26tuwokqsyK2Yiq79GKPRNPWpSiP6VT">DJf26tuwokqsyK2Yiq79GKPRNPWpSiP6VT</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       50.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/a630092afbccf11caf66b49e90472e6027fc9958121b0a6ac605658f7eab2aa3" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DP9TzPsXGkTMzZngFj5zE3zMYm8joD6BmF">DP9TzPsXGkTMzZngFj5zE3zMYm8joD6BmF</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       725.10
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/8556af8e5febc74f6413cdffae01332229b7de47f133947db90e9e4f8b06e172" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D7LKr9JNT3s2X5ah5Pm1zk1SFB5GXXq1V4">D7LKr9JNT3s2X5ah5Pm1zk1SFB5GXXq1V4</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       47.33
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/ead6c8643a1a116f95937e4728a127737153ca44e127cef100832ff2f2fc072b" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>2.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">824.44408277</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/102caea58f5d3b25d83336410ed2ca8e812b36cf0b1312d2b85fbef119d0b834" class="tx_id_title">102caea58f5d3b25d83336410ed2ca8e812b36cf0b1312d2b85fbef119d0b834</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DNeVNom6FbWvmHoT7TYSh9FzBRhhDNcMkX">DNeVNom6FbWvmHoT7TYSh9FzBRhhDNcMkX</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       9,000.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/8556af8e5febc74f6413cdffae01332229b7de47f133947db90e9e4f8b06e172" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D98Gbo1Sch3ChixxUoY15vR1XWjzux1Jun">D98Gbo1Sch3ChixxUoY15vR1XWjzux1Jun</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       0.06
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/9320f8d304a0856f05b74f8204f3c3cd2ea476f5f5bba3c685a9def30763ec65" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>2.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">9,002.06063033</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/3f0b9c9dfef25585b0ffb0ac44417597d6bfb66e666572b40102186dd0e523b3" class="tx_id_title">3f0b9c9dfef25585b0ffb0ac44417597d6bfb66e666572b40102186dd0e523b3</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D6kw4z2x1fXTekLxh46K8NiZZVU2qAjNcY">D6kw4z2x1fXTekLxh46K8NiZZVU2qAjNcY</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       3,000.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/19146d57ee1558239464a2177cf408ce55e68d9617c77da5bad31c4e115fb22e" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DJxJimh5kSdrLnmPYBhwf4a74RKNvXJLnJ">DJxJimh5kSdrLnmPYBhwf4a74RKNvXJLnJ</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       7,003.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/51103331bb07717166fcfd8a19c1225a0cd3bdaabb4b9aa713cb69905c56adeb" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">10,004.00000000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/1f81b372b805e52a7ddc0ff94fc3483ac832324037e0e0223af11566c799dd5c" class="tx_id_title">1f81b372b805e52a7ddc0ff94fc3483ac832324037e0e0223af11566c799dd5c</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D6Yi2uVRGidgtfBaMsM9a8xRjV8dD9g6Aj">D6Yi2uVRGidgtfBaMsM9a8xRjV8dD9g6Aj</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       157.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/8556af8e5febc74f6413cdffae01332229b7de47f133947db90e9e4f8b06e172" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/ACgpBQNbWXVTFWRq6ng5MM4KHrhADzGpnH">ACgpBQNbWXVTFWRq6ng5MM4KHrhADzGpnH</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       310.22
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/4cd7fc2999f6a5c66455c9b22723099bc6529c74375ef7bd46ffe9b5454bfdbe" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">468.22605727</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/e1a56c00299ce023ed4921a4c7902f6ddd2cbac614eb3cef379274e58d2f7118" class="tx_id_title">e1a56c00299ce023ed4921a4c7902f6ddd2cbac614eb3cef379274e58d2f7118</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D8R4viQMWeEXaa2z5gFHHm6y9dHixxzPgb">D8R4viQMWeEXaa2z5gFHHm6y9dHixxzPgb</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       84.50
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DJRSJrhzcimoPnozu7pqF4khucCKF2KE28">DJRSJrhzcimoPnozu7pqF4khucCKF2KE28</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       50.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/03977f8cc58a2eb2b48e70a0f488916a1de2c206cfc1f37a7094a40eedca64cc" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/A9j4fwQdfGvkD41kvLXprYR4EZSvhuCaGa">A9j4fwQdfGvkD41kvLXprYR4EZSvhuCaGa</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       106,739.71
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/1887c9caa9926af0d2e4177bec187875fe9bacf2f3e618989d01a0a0bb51e91e" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">106,875.21057989</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/eb5c66c468a2644ab839ca8480c8e5c17111db354edbb4bb55cf5cf5ba2c2440" class="tx_id_title">eb5c66c468a2644ab839ca8480c8e5c17111db354edbb4bb55cf5cf5ba2c2440</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D5zAHDRceKm9PeR3pvpuW3dEoQGnQ56oL1">D5zAHDRceKm9PeR3pvpuW3dEoQGnQ56oL1</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       4.56
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp">D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       49,281.99
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/d1e389d1188e3d8762aae603af0baef55c8bf4c05e5c4343d252dc8e53ab62be" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>None</div>
+	  <div style="font-weight: bold;" class="break_word">49,286.56120416</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/d20dfa6ce168817275b6e0ca57704994a39bda50cf70ba045f47521d88f3e4a7" class="tx_id_title">d20dfa6ce168817275b6e0ca57704994a39bda50cf70ba045f47521d88f3e4a7</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D5zAHDRceKm9PeR3pvpuW3dEoQGnQ56oL1">D5zAHDRceKm9PeR3pvpuW3dEoQGnQ56oL1</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       4.67
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp">D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       32,291.90
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/c6ffab2b6c5058c5979077c061d17aa54e7ecf1847bcab1db8f337c49d52986b" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>None</div>
+	  <div style="font-weight: bold;" class="break_word">32,296.58632820</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/23522f17c20d617b8d3e5d5b933b1d1819abaca934899bd7a0a718793c6d39b0" class="tx_id_title">23522f17c20d617b8d3e5d5b933b1d1819abaca934899bd7a0a718793c6d39b0</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DCLu2hz88ztqYekf7BN3ozvbdKUSSZNrXx">DCLu2hz88ztqYekf7BN3ozvbdKUSSZNrXx</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       8,510.35
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/f08aa61ffacabf30db45ef5da1e1a1b9c7fdfbad76631695c1dd1f904670e059" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DF1wqvF9Bi8JBPjQ9rA7Z8aJfJpsXa6jBa">DF1wqvF9Bi8JBPjQ9rA7Z8aJfJpsXa6jBa</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       2,640.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/72d17440f048130e2213ae9d064ce194f79f4f208a58f0691df57c2ad16b6883" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D6VSgWgo45m6NXrXbQdgh3ccidCVmhRRSA">D6VSgWgo45m6NXrXbQdgh3ccidCVmhRRSA</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       720.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DMTkzPeRhhjNgKCYd2obE9gDAshj5hM9KQ">DMTkzPeRhhjNgKCYd2obE9gDAshj5hM9KQ</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       300.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/63706f246e7cbc8588482ec8834e96052738e383879f414b15cf63d409be3d90" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DLpaxr6AM8AppeFAMNVbA6qTcZ89VHJjhf">DLpaxr6AM8AppeFAMNVbA6qTcZ89VHJjhf</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       74.41
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/166a1321ecee4154f1e3b8435733fb923066b36dfaf3417449164f38c5c01335" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/ACrrjKL9S4GsxyB2PyMwfhLFgG5CqSuDXv">ACrrjKL9S4GsxyB2PyMwfhLFgG5CqSuDXv</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       496,423.93
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/ddcce0c21c4b2dfdacbf90e02adce70e975c7a3bd42d76956e0055ed1cd231ed" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">508,669.70667397</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/0e7f7afbf79c0ec438b1cad0bc1e61b00eca4e6a33a6ba0ea5eb0d0647ea864c" class="tx_id_title">0e7f7afbf79c0ec438b1cad0bc1e61b00eca4e6a33a6ba0ea5eb0d0647ea864c</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DPN3CX2isQm6C4eTg2GZCsFUshBuG8VmUy">DPN3CX2isQm6C4eTg2GZCsFUshBuG8VmUy</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       4.65
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp">D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       5,230.18
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/14509b1bce9c99d7e93f7b767eb89bf149289b88f57195fc402f184674e1a2fe" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>None</div>
+	  <div style="font-weight: bold;" class="break_word">5,234.83261101</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/2878042aa827d30f4b9ac10a88004a06348569e65610fb9a7939fe800b758622" class="tx_id_title">2878042aa827d30f4b9ac10a88004a06348569e65610fb9a7939fe800b758622</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DQ7Pmnb6pcqkVsauLK5obA4p5t6XXY2YXG">DQ7Pmnb6pcqkVsauLK5obA4p5t6XXY2YXG</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       7.04
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp">D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       20,425.31
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/ef6114a9b7a5660dce9c0f1677c7df66fbef088c40c92ca870127d7a2158828d" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>None</div>
+	  <div style="font-weight: bold;" class="break_word">20,432.36079482</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/8c8fc04fec1093fc05186898e3698e9505ea966965829a30a2a55840ee7b9d37" class="tx_id_title">8c8fc04fec1093fc05186898e3698e9505ea966965829a30a2a55840ee7b9d37</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DNTE9vz4iseYY69nsKTnuVzy5webYMi9qd">DNTE9vz4iseYY69nsKTnuVzy5webYMi9qd</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       4.39
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/db10048c0d6815d93f858e0dfc93fc0f35c3048ee70b7447c7feb3c9933634bc" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp">D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       15,798.53
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/65cf8d082b6b0c985eff18f47d4372a33c8747b8e24d3abf12170647e13065b4" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>None</div>
+	  <div style="font-weight: bold;" class="break_word">15,802.92214440</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/1fe088a60bf16874668db45715d0414da5d4b8efe41b69c7a529ea5f90c9b5a0" class="tx_id_title">1fe088a60bf16874668db45715d0414da5d4b8efe41b69c7a529ea5f90c9b5a0</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DPacZyYnAyH1RdDDkkP37cuRWVw3immo19">DPacZyYnAyH1RdDDkkP37cuRWVw3immo19</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       200.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DLNZbbNfTsyGttZ16SUifHTEQ3xUssAtXX">DLNZbbNfTsyGttZ16SUifHTEQ3xUssAtXX</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       111.20
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/fa26c89edc76449fd250f87082f3420bea7b8b18052a8f95ce7035eab77656fb" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">312.20745129</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/9cc20238c5100696e95eb1c4745e08c7d5bc303a2b5ebee59670bd10af508a75" class="tx_id_title">9cc20238c5100696e95eb1c4745e08c7d5bc303a2b5ebee59670bd10af508a75</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DS5N6JcJxMbQnEPLytr5vxkh6tKLjYvVEd">DS5N6JcJxMbQnEPLytr5vxkh6tKLjYvVEd</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       6.42
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/8556af8e5febc74f6413cdffae01332229b7de47f133947db90e9e4f8b06e172" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp">D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       22,431.63
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/7ea4c0a4d1cb83f721cac87ebdf7350cf97e3e2f4a0c8feb2e2f042720c96ec2" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>None</div>
+	  <div style="font-weight: bold;" class="break_word">22,438.05543669</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/6945c2a65ca0e81dd3516f3f7c0ae1bcc26951f28893b48ad3d4dfe1ae03d264" class="tx_id_title">6945c2a65ca0e81dd3516f3f7c0ae1bcc26951f28893b48ad3d4dfe1ae03d264</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DKFq1JNDAZ6pqraeZrJX72jetRKFoebv9p">DKFq1JNDAZ6pqraeZrJX72jetRKFoebv9p</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       133.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/A7Nvi8F1YCy94mqKfpfKUcmEgYVfAFBsj6">A7Nvi8F1YCy94mqKfpfKUcmEgYVfAFBsj6</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       30,795.50
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/2b5ebe6ea334156da7473b12a847d7ff203d31d839b7b7deb84b7853d731877f" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">30,929.51520780</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/8e4c8af48d3f70451fd1ca0e645c6bc3a8def865865cab3fb76129cc9c87fd3a" class="tx_id_title">8e4c8af48d3f70451fd1ca0e645c6bc3a8def865865cab3fb76129cc9c87fd3a</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DNMayGibBWboEZ2xtk63xJWq8qoet66RoJ">DNMayGibBWboEZ2xtk63xJWq8qoet66RoJ</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       64.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/1a96235a4050e9eb203b788ce62e19be886113685d74f191f99795f8d770dfce" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DGHotMLDzFQRmereoC7W7yM7tdCx2rwEUR">DGHotMLDzFQRmereoC7W7yM7tdCx2rwEUR</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       99.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/8aeeeea56ee5ce1a51d490df573dcc26baa8a4a8fc5f9a139e17502b589a9f17" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">164.00000000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/0f9628a72a9d028650a5355049bcb50cc5e6f313c5d9d8b8b3dfe206de8072f4" class="tx_id_title">0f9628a72a9d028650a5355049bcb50cc5e6f313c5d9d8b8b3dfe206de8072f4</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D5zAHDRceKm9PeR3pvpuW3dEoQGnQ56oL1">D5zAHDRceKm9PeR3pvpuW3dEoQGnQ56oL1</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       4.48
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp">D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       7,069.51
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/ce4697e85f3a14e11bcfb89e4490c32bf5c119ff94ed24155af7f7d3bda89a81" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>None</div>
+	  <div style="font-weight: bold;" class="break_word">7,074.00337562</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/e9176e1105ae7bf735e576dc112417194fa011ce7be3df7a6e8e2b1972af2b22" class="tx_id_title">e9176e1105ae7bf735e576dc112417194fa011ce7be3df7a6e8e2b1972af2b22</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D9cigUHT1pWsL1jgS6Y3hTErF3fo8WjH5H">D9cigUHT1pWsL1jgS6Y3hTErF3fo8WjH5H</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       20.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/cea1ab708c02480e39f630ad4622af6cc2d147bd6ed4fbbb9837f1b567fe65aa" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp">D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       6,678.92
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/d6d88cd2b4798a601a1e45bf89cb6eabbb159037cbd6456a6db9dfc8276f98c2" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>None</div>
+	  <div style="font-weight: bold;" class="break_word">6,698.92359009</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/6ebb2e64e635c76d899b06e61e6d62dc28d2910e878fa16fe685e0705ca9d2ee" class="tx_id_title">6ebb2e64e635c76d899b06e61e6d62dc28d2910e878fa16fe685e0705ca9d2ee</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DHj9uwP5assWoe5jMAzYQcZdrAigLDnB6C">DHj9uwP5assWoe5jMAzYQcZdrAigLDnB6C</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       9.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/8556af8e5febc74f6413cdffae01332229b7de47f133947db90e9e4f8b06e172" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp">D8saXGWsnYNbgd2nLwPuVy71Px7hvUrkBp</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       5,641.46
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/7f564dcf7bbc819c27db811984d0ce9e22490e9667d2afc30dc0a5d461b98a7b" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>None</div>
+	  <div style="font-weight: bold;" class="break_word">5,650.46769837</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/53c2ecefbeec1a9355a96ffc8578cd92c5f9e79fefdcd498449fdf195e2f023d" class="tx_id_title">53c2ecefbeec1a9355a96ffc8578cd92c5f9e79fefdcd498449fdf195e2f023d</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk">DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       18.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv">DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       5,331.30
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/04e1b3e7a90102d62d7640bbcb45031a083bcb5feb5f04b2db133e5024d5c155" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.58200000</div>
+	  <div style="font-weight: bold;" class="break_word">5,350.89000000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/dcfb82bc62b2efde2bd3488844c7d6ff636a138613c2ea10a575c4fcef300247" class="tx_id_title">dcfb82bc62b2efde2bd3488844c7d6ff636a138613c2ea10a575c4fcef300247</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DGvG1TQLbKcpeayw2nKbc2R6XE9wnxqi9D">DGvG1TQLbKcpeayw2nKbc2R6XE9wnxqi9D</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       18.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/870a24ba33b26149b6de0aabb2db2e0bbb330242a225b5acf698c859433c6bc4" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">19.00000000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/abfc601702e8cdebf9761762f7e1d459a7c2c7cc5584d1f878fdb87d4b1084e8" class="tx_id_title">abfc601702e8cdebf9761762f7e1d459a7c2c7cc5584d1f878fdb87d4b1084e8</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DGHYteZua5SVmLgBMTeDZsMob4JHsGx5f2">DGHYteZua5SVmLgBMTeDZsMob4JHsGx5f2</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       18.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DBFzkapqiKrXMMr57SreWFQ6G3W8xSp6dJ">DBFzkapqiKrXMMr57SreWFQ6G3W8xSp6dJ</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       2,559.94
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/88ccbfc2e05bd3c1b4f3d18167baebf352ec63a1396cb4073329ffe5468c5aa8" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.58200000</div>
+	  <div style="font-weight: bold;" class="break_word">2,579.52400000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/04464ec9d21ad9e24b269f76520bbc33499475dc30ae1cfeb14af051eafcdada" class="tx_id_title">04464ec9d21ad9e24b269f76520bbc33499475dc30ae1cfeb14af051eafcdada</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D9ie3UXDz6MfEdfAPg1jiiQtBXRS15yK8H">D9ie3UXDz6MfEdfAPg1jiiQtBXRS15yK8H</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       10.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/c47ba77759adcf09ae8b056222d77f22a42de4429de031bc29d6d3662c26fca1" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/D7drmfVbSTGBdhyXe2VkFrFAeuNRqC6GWu">D7drmfVbSTGBdhyXe2VkFrFAeuNRqC6GWu</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       78.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/d2e804dc3ab59f5019c114f5500e585185e6d28e5da836c2bf968fdd9169b1db" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.00000000</div>
+	  <div style="font-weight: bold;" class="break_word">89.00000000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/88ccbfc2e05bd3c1b4f3d18167baebf352ec63a1396cb4073329ffe5468c5aa8" class="tx_id_title">88ccbfc2e05bd3c1b4f3d18167baebf352ec63a1396cb4073329ffe5468c5aa8</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DGHYteZua5SVmLgBMTeDZsMob4JHsGx5f2">DGHYteZua5SVmLgBMTeDZsMob4JHsGx5f2</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       18.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DBFzkapqiKrXMMr57SreWFQ6G3W8xSp6dJ">DBFzkapqiKrXMMr57SreWFQ6G3W8xSp6dJ</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       2,540.36
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/b43d17c9f46d939bbc26e471ba9c9251325378f06aeb0a80c863185287ca62f7" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.58200000</div>
+	  <div style="font-weight: bold;" class="break_word">2,559.94200000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/04e1b3e7a90102d62d7640bbcb45031a083bcb5feb5f04b2db133e5024d5c155" class="tx_id_title">04e1b3e7a90102d62d7640bbcb45031a083bcb5feb5f04b2db133e5024d5c155</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk">DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       18.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv">DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       5,311.72
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/c5a78c5385d7d8e82ce9723e59a38b83361ae32e3eaa5f36d9ab885ab67475cf" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.58200000</div>
+	  <div style="font-weight: bold;" class="break_word">5,331.30800000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/c5a78c5385d7d8e82ce9723e59a38b83361ae32e3eaa5f36d9ab885ab67475cf" class="tx_id_title">c5a78c5385d7d8e82ce9723e59a38b83361ae32e3eaa5f36d9ab885ab67475cf</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk">DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       18.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv">DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       5,292.14
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/51bb37d64d6274785f95d75b809d01aa9ee101cc3fb341409912591ef097c6bb" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.58200000</div>
+	  <div style="font-weight: bold;" class="break_word">5,311.72600000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/b43d17c9f46d939bbc26e471ba9c9251325378f06aeb0a80c863185287ca62f7" class="tx_id_title">b43d17c9f46d939bbc26e471ba9c9251325378f06aeb0a80c863185287ca62f7</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DGHYteZua5SVmLgBMTeDZsMob4JHsGx5f2">DGHYteZua5SVmLgBMTeDZsMob4JHsGx5f2</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       18.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DBFzkapqiKrXMMr57SreWFQ6G3W8xSp6dJ">DBFzkapqiKrXMMr57SreWFQ6G3W8xSp6dJ</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       2,520.77
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/defda03f7688bc0d88a40e0babd9876b412d6df2df6fe8e3cec6c47a50dcddcf" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.58200000</div>
+	  <div style="font-weight: bold;" class="break_word">2,540.36000000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/51bb37d64d6274785f95d75b809d01aa9ee101cc3fb341409912591ef097c6bb" class="tx_id_title">51bb37d64d6274785f95d75b809d01aa9ee101cc3fb341409912591ef097c6bb</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk">DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       18.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv">DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       5,272.56
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/b26987c4113f92589247099f910eeff67c1a4a84310b8d1a04f9fdc2610633cc" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.58200000</div>
+	  <div style="font-weight: bold;" class="break_word">5,292.14400000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/b26987c4113f92589247099f910eeff67c1a4a84310b8d1a04f9fdc2610633cc" class="tx_id_title">b26987c4113f92589247099f910eeff67c1a4a84310b8d1a04f9fdc2610633cc</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk">DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       18.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv">DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       5,252.98
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/f9ba56dcc39936cc3e10690ea7b393e9feacbab0fa414cf53136e917aaa69387" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.58200000</div>
+	  <div style="font-weight: bold;" class="break_word">5,272.56200000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/defda03f7688bc0d88a40e0babd9876b412d6df2df6fe8e3cec6c47a50dcddcf" class="tx_id_title">defda03f7688bc0d88a40e0babd9876b412d6df2df6fe8e3cec6c47a50dcddcf</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DGHYteZua5SVmLgBMTeDZsMob4JHsGx5f2">DGHYteZua5SVmLgBMTeDZsMob4JHsGx5f2</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       18.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DBFzkapqiKrXMMr57SreWFQ6G3W8xSp6dJ">DBFzkapqiKrXMMr57SreWFQ6G3W8xSp6dJ</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       2,501.19
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/ad72e27a5150579a68cb6c1e2653b6733898e5449df7a924307adb96deb32caa" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.58200000</div>
+	  <div style="font-weight: bold;" class="break_word">2,520.77800000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/f9ba56dcc39936cc3e10690ea7b393e9feacbab0fa414cf53136e917aaa69387" class="tx_id_title">f9ba56dcc39936cc3e10690ea7b393e9feacbab0fa414cf53136e917aaa69387</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk">DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       18.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv">DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       5,233.39
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/a3372ad9a64ef5bd1858b9c0503ef8636aa0c881915b1ba985f91993c624ef3d" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.58200000</div>
+	  <div style="font-weight: bold;" class="break_word">5,252.98000000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <div class="panel panel-default panel-primary center-block" style="padding: 0px !important;">
+    <div class="panel-heading tx_heading">Transaction ID: <a href="/tx/DOGE/a3372ad9a64ef5bd1858b9c0503ef8636aa0c881915b1ba985f91993c624ef3d" class="tx_id_title">a3372ad9a64ef5bd1858b9c0503ef8636aa0c881915b1ba985f91993c624ef3d</a></div>
+
+    <div class="row tx_row">
+
+      <div class="col-sm-6 col-xs-0">
+	</div>
+
+      <div class="tx_receive text-right col-sm-6 col-xs-12">
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk">DBQsrRa9g8FdMV8DRXmB8brFYfb7UXnTqk</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       18.00
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <span class="text-muted"><span class="glyphicon glyphicon-chevron-right poptip" data-toggle="tooltip" data-placement="left" title="This output remains unspent."></span></span>  
+	     </div>
+	   </div>
+	   <div class="row">
+	     <div class="col-sm-8 col-xs-12 tx_address">
+	       <a href="/address/DOGE/DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv">DNiRyiryoSfkqBBFfVe18MsEhjDwcdVCVv</a>
+	     </div>
+	     <div class="col-sm-3 col-xs-10 text-right info_overflow">
+	       5,213.81
+	     </div>
+	     <div class="col-sm-1 col-xs-2">
+	       <a href="/tx/DOGE/917d7b656f35d58f0c4d1d03a385fcac39d5db502dcda201f5de92bc1f7ed54a" class="poptip" data-toggle="tooltip" data-placement="left" title="Spent in..."><span class="glyphicon glyphicon-chevron-right poptip" ></span></a>  
+	     </div>
+	   </div>
+      </div>
+    </div>
+    <div class="row tx_info">
+      <div class="col-sm-12 col-xs-12" style="background-color: #848484; color: white;">
+	<div class="col-sm-8 col-xs-6 text-right">
+	  <div><strong>Fee</strong></div>
+	  <div><strong>Total sent</strong></div>
+	</div>
+	<div class="col-sm-4 col-xs-6 text-left">
+	  <div>1.58200000</div>
+	  <div style="font-weight: bold;" class="break_word">5,233.39800000</div>
+	</div>
+      </div>
+    </div>
+    </div>
+
+</div>
+    
+
+    </div>
+    <hr>
+    
+    <footer>
+      <div class="container">
+	<div class="row">
+	  <div class="col-sm-5 col-xs-6">
+	    <a href="https://block.io" target=_blank style="color: black;">Block.io, Inc.</a> 2019.
+	  </div>
+	  <div class="col-sm-4 col-xs-3"><span id="status"></span></div>
+	  <div class="col-sm-2 col-xs-3 col-sm-offset-1">
+	    Bitcoin API and more.
+	  </div>
+	</div>
+      </div>
+    </footer>    
+
+
+
+
+    <a href="/address/devfund">
+      <img id="doge" src="//live-sochain-blockioinc.netdna-ssl.com/doge.png" width="75"/>
+    </a>
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//live-sochain-blockioinc.netdna-ssl.com/js/analytics.js','ga');
+      ga('require', 'displayfeatures');      
+      ga('create', 'UA-90922629-2', 'chain.so');
+      ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>
