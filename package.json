@@ -31,7 +31,7 @@
     "mongoose": "^5.7.5"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bluebird": "^3.5.5",
     "chalk": "^2.4.2"
   }
